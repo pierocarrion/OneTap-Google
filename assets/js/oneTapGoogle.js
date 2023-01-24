@@ -8,7 +8,6 @@ function handleUserInformation(credential) {
     if (!credential) return
 
     const googleResult = parseJwt(credential)
-    console.log('🚀 ~ file: oneTapGoogle.js:11 ~ handleUserInformation ~ googleResult', googleResult)
 
     if (!googleResult) throw new Error('Cannot fetch user information from Google')
 
