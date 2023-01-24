@@ -32,7 +32,6 @@ function handleCredentialResponse(response) {
 
 window.addEventListener("load", function () {
     const credential = localStorage.getItem('G_ID');
-    console.log('🚀 ~ file: oneTapGoogle.js:36 ~ credential', credential)
     if (!credential) {
         google.accounts.id.initialize({
             client_id: "301144642014-tf1qtggqb15f5hr6bj6rv1ahll1vja65.apps.googleusercontent.com",
