@@ -16,11 +16,14 @@ function handleUserInformation(credential) {
     img.src = googleResult.picture
     img.alt = 'User'
 
-    document.querySelector('#given-name').innerText = `Given Name: ${googleResult?.given_name}`
-    document.querySelector('#family-name').innerText = `Family Name: ${googleResult?.family_name}`
-    document.querySelector('#email').innerText = `Email: ${googleResult?.email}`
-    document.querySelector('#email-verified').innerText = `Email Verified: ${googleResult?.email_verified}`
-    document.querySelector('#image-url').innerText = `Picture: ${googleResult?.picture}`
+    document.querySelector('#given-name').innerText = `${googleResult?.given_name}`
+    document.querySelector('#family-name').innerText = `${googleResult?.family_name}`
+    document.querySelector('#email').innerText = `${googleResult?.email}`
+    document.querySelector('#email-verified').innerText = `${googleResult?.email_verified}`
+    document.querySelector('#picture').innerText = `${googleResult?.picture}`
+
+
+    hideLogOutButton(false)
 }
 
 function handleCredentialResponse(response) {
@@ -50,4 +53,9 @@ window.addEventListener("load", function () {
 
 function logOut() {
     localStorage.clear()
+    hideLogOutButton(true)
+}
+
+function hideLogOutButton(boolean) {
+    document.querySelector('#log-out').style = boolean ? "display:none" : "display:block"
 }

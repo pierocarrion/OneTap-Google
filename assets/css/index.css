@@ -4,3 +4,30 @@
 .typography_page {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
+
+.header {
+  display: flex;
+}
+
+h6 {
+  width: 150px;
+  white-space: pre-wrap;
+  max-width: 100px;
+}
+
+.name {
+  width: 150px;
+}
+
+td {
+  width: 100px;
+  max-width: 500px;
+  word-wrap: break-word;
+}
+
+.logOutButton {
+  display: none;
+  color: white;
+  background-color: transparent;
+  border: none;
+}

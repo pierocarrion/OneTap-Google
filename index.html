@@ -12,8 +12,8 @@
          <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css" rel="stylesheet" >
 
          <link href="./assets/css/index.css" rel="stylesheet">
-
       </head>
+
       <body class="d-flex h-100 text-center text-bg-dark">
          <div class="d-flex w-100 h-100 p-3 mx-auto flex-column">
             <header class="mb-auto">
@@ -21,6 +21,8 @@
                   <h3 class="float-md-start mb-0 typography_page">Personal Project</h3>
                   <nav class="nav nav-masthead justify-content-center float-md-end">
                      <img id="avatar" class="avatar" alt="Avatar"></img>
+                     <button id="log-out" class="logOutButton" onclick="logOut()"><i class="fa fa-sign-out" aria-hidden="true"></i>
+                        Log out</button>
                   </nav>
                </div>
             </header>
@@ -28,14 +30,58 @@
                <h1>One Tap Google</h1>
                <p class="lead">Information provided by Google API</p>
                <br>
-               <p class="lead">
-                  <h6 id="given-name"></h6>
-                  <h6 id="family-name"></h6>
-                  <h6 id="email"></h6>
-                  <h6 id="email-verified"></h6>
-                  <h6 id="image-url"></h6>
-               </p>
-            </main>
+               <br>
+               <br>
+               <div class="flex">
+                  <table class="table"  align="center" style="color: #ffffff;width: 5%; border-bottom:0px solid transparent; text-align: left; ">
+                     <tr>
+                        <td>
+                           <h6 class="name">Given Name</h6>
+                        </td>
+                        <td>
+                           <h6>&nbsp;:</h6>
+                        </td>
+                        <td id="given-name"></td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <h6 class="name">Family Name</h6>
+                        </td>
+                        <td>
+                           <h6>&nbsp;:</h6>
+                        </td>
+                        <td id="family-name"></td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <h6 class="name">Email</h6>
+                        </td>
+                        <td>
+                           <h6>&nbsp;:</h6>
+                        </td>
+                        <td id="email"></td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <h6 class="name">Email Verified</h6>
+                        </td>
+                        <td>
+                           <h6>&nbsp;:</h6>
+                        </td>
+                        <td id="email-verified"></td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <h6 class="name">Picture</h6>
+                        </td>
+                        <td>
+                           <h6>&nbsp;:</h6>
+                        </td>
+                        <td id="picture"></td>
+                     </tr>
+                  </table>
+               </div>
+               </main>
             
             <footer class="mt-auto text-white-50">
                <p class="typography_page">&Sigma; One Tap Google - Personal Project</p>
