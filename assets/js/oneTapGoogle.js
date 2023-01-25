@@ -53,7 +53,7 @@ window.addEventListener("load", function () {
 
 function logOut() {
     localStorage.clear()
-    hideLogOutButton(true)
+    location.reload()
 }
 
 function hideLogOutButton(boolean) {
