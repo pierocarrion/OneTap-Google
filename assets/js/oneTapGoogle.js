@@ -1,7 +1,8 @@
 function parseJwt(token) {
     const base64Url = token.split('.')[1];
-    const base64 = base64Url.replace('-', '+').replace('_', '/');
-    return JSON.parse(window.atob(base64));
+    const result = decodeURIComponent(escape(window.atob(base64Url)))
+
+    return JSON.parse(result);
 };
 
 function handleUserInformation(credential) {
@@ -42,7 +43,7 @@ window.addEventListener("load", function () {
 
         google.accounts.id.prompt((notification) => {
             if (notification.isNotDisplayed() || notification.isSkippedMoment()) {
-                document.cookie = `g_state=;path=/;expires=Thu, 01 Jan 1970 00:00:01 GMT`;
+                document.cookie = 'g_state=;path=/;expires=Thu, 01 Jan 1970 00:00:01 GMT';
                 google.accounts.id.prompt()
             }
         });
